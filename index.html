@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <link rel="stylesheet" media="screen and (min-width: 500px)" href="css/style.css" type="text/css" />    
+    <link rel="stylesheet" media="screen and (max-width: 500px)" href="css/mobcss.css" type="text/css"> 
+
+    <title>GTD Tool</title>
+</head>
+<body>
+    <h1 class="title">
+        <img src="./img/back.png" id="backtaskstatus" alt="back"></img>
+        <img src="./img/back.png" id="backtaskcontent" alt="back"></img>
+        GTD Tool
+    </h1>
+    <div class="contentarea">
+        <div class="allclasses">
+            <p class="marked">所有任务</p>
+            <p>分类列表</p>
+            <ul class="class">
+
+            </ul>
+            <p id="addclass"><img src="img/addclass.png" alt="addclass">新增分类</p>
+        </div>
+
+        <div class="taskstatus">
+            <div class="doneornot">
+                <div class="chosenbtn"><span>所有</span></div>
+                <div class="unchosenbtn"><span>未完成</span></div>
+                <div class="unchosenbtn"><span>已完成</span></div>
+            </div>
+            <div id="alltasks">
+
+            </div>
+            <p id="addtask"><img src="img/addclass.png" alt="addtask">新增任务</p>
+        </div>
+
+        <div class="taskcontent">
+            <div class="startstatus">
+                <p class="tasktitle3">健身<img class="taskdone" src="img/taskdone.png" alt="taskdone"><img class="edit" alt="edit" src="img/edit.png"></p>
+                <p class="tasktime">任务日期：2020-02-11</p>
+                <p class="taskallcontent">弹力带15分钟，跑步20分钟，拉伸10分钟。</p>
+            </div>
+
+            <div class="editstatus">
+                <p class="edittasktitle3"><input type="text" placeholder="标题" value=""></p>
+                <p class="edittasktime">任务日期：<input type="date" value=""></p>
+                <textarea class="edittaskallcontent" placeholder="内容"></textarea>
+                <span id="confirmedit">确定</span>
+                <span id="quitedit">取消</span>
+            </div>
+
+            <div class="updatestatus">
+                <p class="updatetasktitle3"><input type="text" value=""></p>
+                <p class="updatetasktime">任务日期：<input type="date" value=""></p>
+                <textarea class="updatetaskallcontent"></textarea>
+                <span id="quitupdate">取消</span>
+                <span id="confirmupdate">确定</span>
+            </div>
+        </div>
+
+        <div class="confirmadd">
+            <p id="confirmtitle">新增分类</p>
+            <p>选择分类<select><option>新增主分类</option></select></p>
+            <p>新增分类<input id="newclassname" type="text"></p>
+            <span id="quitaddclass">取消</span>
+            <span id="confirmaddclass">确认</span>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/util.js"></script>
+    <script type="text/javascript" src="js/gtd-tools.js"></script>
+</body>
+</html>

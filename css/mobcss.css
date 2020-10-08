@@ -1,0 +1,471 @@
+.startstatus, .taskstatus, .updatestatus, .editstatus, .taskcontent {
+    display: none
+}
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+
+}
+
+html, body {
+    height: 100%;
+
+}
+
+input, textarea {
+    outline: none;
+    font-family: Microsoft YaHei
+}
+
+textarea {
+    resize: none;
+    font-size: normal;
+}
+
+.taskcontent {
+    height: 100%;
+}
+
+/* 最上方标题 */
+.title {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    height: 2.5rem;
+    background-color: #769fcd;
+    color: white;
+}
+
+#backtaskstatus {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    color:black;
+    left: 0.5rem;
+    top: calc(20px - 0.5rem);
+    display: none
+}
+
+#backtaskcontent {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    color:black;
+    left: 0.5rem;
+    top: calc(20px - 0.5rem);
+    display: none
+}
+/* 第一栏 */
+.contentarea {
+    width: 100%;
+    position: absolute;
+    top: 2.5rem;
+    bottom: 0;
+    font-size: 0.9rem;
+}
+
+.allclasses {
+    width: 100%;
+    height: 100%;
+    background-color:#d6e6f2;
+}
+
+.allclasses p {
+    padding: 0.4rem 0 0.4rem 0.8rem;
+}
+
+#thealltask {
+    background-color: #f7fbfc;
+}
+
+.mainclass {
+    list-style-type: none;
+}
+
+.subclass {
+    list-style-type: none;
+}
+
+.class span {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.4rem 0;
+}
+    
+#chosenclass {
+    background-color: #f7fbfc;
+}
+
+li {
+    position: relative;
+}
+li img {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.3rem;
+    margin-left: 0.8rem;
+}
+
+.mainclass span, .subclass span {
+    display: flex;
+    align-items: center;
+}
+
+.subclass img {
+    margin-left: 1.2rem;
+}
+
+.delete {
+    position: absolute;
+    right: 0.8rem;
+}
+
+#addclass {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 100%;
+    line-height: 3rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #b9d7ea;
+}
+
+#addclass img {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 1rem;
+}
+/* 第二栏 */
+.doneornot {
+    width: 100%;
+    text-align: center;
+    background-color:#d6e6f2;
+    height: 2.4rem;
+    font-size: 0;
+}
+
+.doneornot span {
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 0.8rem;
+    border-radius: 0.5rem;
+    line-height: 1.4rem;
+    padding: 0 0.4rem 0 0.4rem;
+    margin-top: 0.5rem;
+}
+
+.doneornot div {
+    display: inline;
+}
+
+.chosenbtn span{
+background-color: #b9d7ea;
+}
+
+.unchosenbtn span {
+background-color: #f7fbfc;
+}
+
+#alltasks {
+    height: calc(100% - 3rem);
+    overflow: auto;
+}
+
+.date {
+    padding: 0.2rem 0px 0.2rem 0.5rem;
+    background-color: #b9d7ea;
+}
+
+.tasktitle {
+    padding: 0.4rem 0px 0.4rem 1rem;
+    background-color: white;
+}
+
+.chosentask {
+    background-color: #f7fbfc;
+}
+
+.true {
+    color: lightslategrey;
+    text-decoration: line-through;
+}
+
+#addtask {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 3rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #b9d7ea;
+    line-height: 3rem;
+}
+
+#addtask img {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 1rem;
+}
+/* 第三栏 */
+.tasktitle3 {    
+    position: relative;
+    line-height: 1.8em;
+    height: 1.8em;
+    font-weight: bold;
+    background-color:#d6e6f2;
+    padding: 0.2em 1rem;
+    font-size: 1rem;
+}
+
+.tasktitle3 img {
+    width: 1.2rem;
+    height: 1.2rem;
+    position: absolute;
+    right: 2.5rem;
+    top: 50%;
+    margin-top: -0.6rem;
+    margin-right: 1rem;
+}
+
+.tasktitle3 img:first-child {
+    right: 0.2rem;
+}
+
+.tasktime {
+    line-height: 1.8em;
+    height: 1.8em;
+    padding: 0.2em 1rem;
+    background-color: #b9d7ea;
+    font-size: 1rem;
+}
+
+.taskallcontent {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+/* 第三栏编辑状态 */
+.editstatus {
+    height: 100%;
+}
+
+
+.edittasktitle3 {
+    display: flex;
+    align-items: center;
+    height: 1.8rem;
+    font-weight: bold;
+    background-color:#d6e6f2;
+    line-height: 1.8rem;
+    padding: 0.2rem 1rem;
+    padding-left: 1rem;
+    font-size: 1rem;
+    position: relative;
+}
+
+.edittasktitle3 input{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 12rem;
+    height: 1.6rem;
+    padding: 0 0.2rem;
+    font-size: 1rem;
+}
+
+
+.edittasktime {
+    display: flex;
+    align-items: center;
+    line-height: 1.8rem;
+    padding: 0.2rem 1rem;
+    background-color: #b9d7ea;
+    height: 1.8rem;
+    font-size: 1rem;
+}
+
+
+.edittasktime input {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 12rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    padding: 0 0.2rem;
+    /* font-size: 1rem; */
+}
+
+
+.edittaskallcontent {   
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    display: block;
+    width: calc(100% - 2rem);
+    position: absolute;
+    top: 4.4rem;
+    bottom: 0;
+}
+
+
+.editstatus span {
+    display: inline-block;
+    position: absolute;
+    z-index: 99;
+    bottom: 1.2rem;
+    right: 5rem;
+    background-color: #b9d7ea;
+    padding: 0.1rem 0.4rem;
+    border-radius: 0.5rem;
+}
+
+
+#confirmedit {
+    right: 1rem;
+} 
+
+.updatestatus {
+    height: 100%;
+}
+
+
+.updatetasktitle3 {
+    display: flex;
+    align-items: center;
+    height: 1.8rem;
+    font-weight: bold;
+    background-color:#d6e6f2;
+    line-height: 1.8rem;
+    padding: 0.2rem 1rem;
+    padding-left: 1rem;
+    font-size: 1rem;
+    position: relative;
+}
+
+.updatetasktitle3 input{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 12rem;
+    height: 1.6rem;
+    padding: 0 0.2rem;
+    font-size: 1rem;
+
+}
+
+
+.updatetasktime {
+    display: flex;
+    align-items: center;
+    line-height: 1.8rem;
+    padding: 0.2rem 1rem;
+    background-color: #b9d7ea;
+    height: 1.8rem;
+    font-size: 1rem;
+}
+
+
+.updatetasktime input {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 12rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    padding: 0 0.2rem;
+    /* font-size: 1rem; */
+}
+
+
+.updatetaskallcontent {   
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    display: block;
+    width: calc(100% - 2rem);
+    position: absolute;
+    top: 4.4rem;
+    bottom: 0;
+}
+
+
+.updatestatus span {
+    display: inline-block;
+    position: absolute;
+    z-index: 99;
+    bottom: 1.2rem;
+    right: 5rem;
+    background-color: #b9d7ea;
+    padding: 0.1rem 0.4rem;
+    border-radius: 0.5rem;
+}
+
+
+#confirmupdate {
+    right: 1rem;
+} 
+/* 新增分类弹窗 */
+.confirmadd {
+    display: none;
+    text-align: center;
+    background-color: #b9d7ea;
+    margin-left: -8rem;
+    padding: 1rem 0;
+    width: 16rem;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    border-radius: 1rem;
+    border: #bfbfbf 1px solid;
+    font-size: 0;
+}
+
+#confirmtitle {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.confirmadd p{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.5rem;
+    /* border: solid black 1px; */
+}
+
+.confirmadd select {
+    display: inline-block;
+    width: 8.5rem;
+    margin-left: 0.5rem;
+    vertical-align: baseline;
+    height: 1.5rem;
+}
+
+
+.confirmadd input {
+    box-sizing: border-box;
+    width: 8.5rem;
+    margin-left: 0.5rem;
+    height: 1.5rem;
+    vertical-align: bottom;
+    padding: 0 0.2rem;
+
+}
+
+.confirmadd span{
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 1rem;
+    background-color: white;
+    padding: 0.15rem 0.3rem;
+    border-radius: 0.5rem;
+}

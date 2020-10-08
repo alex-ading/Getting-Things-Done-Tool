@@ -1,0 +1,488 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+
+}
+
+#backtaskcontent, #backtaskstatus {
+    display: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+input, textarea {
+	outline: none
+}
+
+textarea {
+    resize: none;
+    font-size: 16px;
+    font-family: Microsoft YaHei;
+}
+
+.title {
+    width: 100%;
+    text-indent: 2em;
+    float: left;
+    font-size: large;
+    line-height: 50px;
+    height: 50px;
+    background-color: #769fcd;
+    color: white;
+}
+
+.contentarea {
+    width: 100%;
+    position: absolute;
+    background-color:#d6e6f2;
+    top: 50px;
+    bottom: 0;
+}
+
+.allclasses {
+    width: 200px;
+    float: left;
+    border-right: #dedede 1px solid;
+    height: 100%;
+}
+
+.taskstatus {
+    width: 250px;
+    float: left;
+    border-right: #dedede 1px solid;
+    height: 100%;
+    background-color: white;
+}
+
+.taskcontent {
+    margin-left: 452px;
+    height: 100%;
+    background-color: white;
+    position: relative;
+}
+
+/* 第一栏 */
+.allclasses p {
+    padding: 5px 10px;
+}
+
+.allclasses p:first-child:hover {
+    background-color: #f7fbfc;
+    cursor: pointer;
+}
+
+#thealltask {
+    background-color: #f7fbfc;
+}
+
+.mainclass {
+    list-style-type: none;
+}
+
+.subclass {
+    list-style-type: none;
+}
+
+.class span {
+position: relative;
+display: inline-block;
+width: 100%;
+padding: 3px 0;
+}
+
+#chosenclass {
+    background-color: #f7fbfc;
+}
+
+.class span:hover {
+    cursor: pointer;
+    background-color: #f7fbfc;
+}
+
+.class span:hover img {
+    display: inline;
+}
+
+.mainclass span, .subclass span{
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 25px;
+    /* border: 1px solid black; */
+    line-height: 25px;
+    /* vertical-align: middle; */
+}
+
+span img {
+    /* position: absolute;
+    top: 3.5px; */
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    margin-left: 20px;
+    /* border: 1px solid black; */
+}
+
+.subclass img {
+    margin-left: 30px;
+}
+
+.delete {
+    position: absolute;
+    right: 2px;
+    display: none;
+}
+
+#addclass {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0;
+    padding: 5px 0;
+    background-color: #b9d7ea;
+}
+
+#addclass:hover {
+    cursor: pointer;
+    background-color: #8cb4e2;
+}
+
+#addclass img {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+}
+
+/* 第二栏 */
+.doneornot {
+    width: 250px;
+    font-size: 0;
+    text-align: center;
+    background-color:#d6e6f2;
+    height: 50px;
+}
+
+.doneornot span {
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 10px;
+    border-radius: 8px;
+    line-height: 1;
+    padding: 4px 5px;
+    margin-top: 13px;
+}
+
+.doneornot div {
+    display: inline;
+}
+
+.chosenbtn span{
+cursor: default;
+background-color: #b9d7ea;
+}
+
+.unchosenbtn span {
+cursor: pointer;
+background-color: #f7fbfc;
+}
+
+#alltasks {
+    height: calc(100% - 85px);
+    overflow: auto;
+}
+
+.date {
+    padding: 5px 0px 5px 10px;
+    background-color: #b9d7ea;
+}
+
+.tasktitle {
+    padding: 5px 0 5px 20px;
+    background-color: white;
+}
+
+.chosentask {
+    background-color: #f7fbfc;
+}
+
+.tasktitle:hover {
+    cursor: pointer;
+    background-color: #d6e6f2;
+}
+
+.true {
+    color: #bfbfbf;
+    text-decoration: line-through;
+}
+
+#addtask {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 30px;
+    margin: 0;
+    padding: 5px 0;
+    line-height: 30px;
+    background-color: #b9d7ea;
+}
+
+#addtask:hover {
+    cursor: pointer;
+    background-color: #8cb4e2;
+}
+
+#addtask img {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    vertical-align: bottom;
+}
+
+.donetask {
+    text-decoration-line: line-through;
+    color: grey;
+}
+
+/* 第三栏 */
+.tasktitle3 {
+    height: 50px;
+    font-weight: bold;
+    background-color:#d6e6f2;
+    line-height: 50px;
+    padding-left: 20px;
+}
+
+.tasktitle3 img {
+    width: 28px;
+    height: 28px;
+    float: right;
+    cursor: pointer;
+    margin-top: 11px;
+    margin-right: 20px;
+}
+
+.tasktime {
+    line-height: 45px;
+    padding: 0 20px;
+    background-color: #b9d7ea;
+}
+
+.taskallcontent {
+    padding: 10px 20px;
+}
+
+/* 第三栏编辑状态 */
+.editstatus {
+    display: none;
+}
+
+.updatestatus {
+    display: none;
+}
+
+
+.edittasktitle3 {
+    height: 40px;
+    font-weight: bold;
+    background-color: #d6e6f2;
+    font-size: 0;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.updatetasktitle3 {
+    height: 40px;
+    font-weight: bold;
+    background-color:#d6e6f2;
+    font-size: 0;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.edittasktitle3 input{
+    box-sizing: border-box;
+    line-height: 1;
+    font-size: 16px;
+    display: inline-block;
+    width: 250px;
+    border:#dedede 1px solid;
+    height: 30px;
+    padding: 0 5px;
+}
+
+.updatetasktitle3 input{
+    box-sizing: border-box;
+    line-height: 1;
+    font-size: 16px;
+    display: inline-block;
+    width: 250px;
+    border:#dedede 1px solid;
+    height: 30px;    
+    padding: 0 5px;
+}
+
+.edittasktime {
+    line-height: 45px;
+    padding: 0 20px;
+    background-color: #b9d7ea;
+}
+
+.updatetasktime {
+    line-height: 45px;
+    padding: 0 20px;
+    background-color: #b9d7ea;
+}
+
+.edittasktime input {
+    box-sizing: border-box;
+    display: inline-block;
+    border:#dedede 1px solid;
+    height: 25px;
+    width: 200px;
+    padding: 0 5px;
+}
+
+.updatetasktime input {
+    box-sizing: border-box;
+    display: inline-block;
+    border:#dedede 1px solid;
+    height: 25px;
+    width: 200px;
+    padding: 0 5px;
+
+}
+
+.edittaskallcontent {   
+    display: block;
+    position: absolute;
+    bottom: 0;
+    top: 95px;
+    padding: 10px 20px;
+    width: calc(100% - 40px);
+    /* border: black solid 10px; */
+}
+
+.updatetaskallcontent {   
+    display: block;
+    position: absolute;
+    bottom: 0;
+    top: 95px;
+    padding: 10px 20px;
+    width: calc(100% - 40px);
+}
+
+.editstatus span {
+    display: inline-block;
+    position: absolute;
+    z-index: 99;
+    bottom: 20px;
+    right: 20px;
+    background-color: #d6e6f2;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
+.updatestatus span {
+    display: inline-block;
+    position: absolute;
+    z-index: 99;
+    bottom: 20px;
+    right: 20px;
+    background-color: #d6e6f2;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
+#confirmedit {
+    right: 90px;
+}
+
+#confirmupdate {
+    right: 90px;
+}
+
+.editstatus span:hover{
+    cursor: pointer;
+    background-color: #b9d7ea;
+}
+
+.updatestatus span:hover{
+    cursor: pointer;
+    background-color: #b9d7ea;
+}
+
+/* 弹框 */
+.confirmadd {
+    display: none;
+    text-align: center;
+    background-color:#d6e6f2;
+    margin-left: -150px;
+    padding: 15px 0;
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    font-size: 0;
+    border-radius: 25px;
+}
+
+#confirmtitle {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.confirmadd p{
+    font-size: 18px;
+    margin-bottom: 15px;
+    /* border: black 1px solid; */
+    line-height: 25px;
+}
+
+.confirmadd select {
+    display: inline-block;
+    width: 130px;
+    margin-left: 15px;
+    border: rgb(51, 63, 75) 1px solid;
+    vertical-align: bottom;
+    height: 25px;
+}
+
+.confirmadd input {
+    box-sizing: border-box;
+    width: 130px;
+    height: 25px;
+    margin-left: 15px;
+    padding: 0 5px;
+    vertical-align: bottom;
+    border:#dedede 1px solid;
+    /* border: black 1px solid; */
+}
+
+.confirmadd span{
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 15px;
+    background-color: #f7fbfc;
+    padding: 3px 8px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.confirmadd span:hover {
+    background-color: #b9d7ea;
+}
+
